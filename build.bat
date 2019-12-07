@@ -47,10 +47,27 @@ ren %binName% %projectName%
 7z.exe a %projectName%-%GOOS%%GOARCH%.zip %packFiles%
 del %projectName% /Q
 
+::linux64
+SET GOOS=linux
+SET GOARCH=amd64
+SET binName=%projectName%-%GOOS%%GOARCH%
+go build -o %binName% %homePath%\main.go
+ren %binName% %projectName%
+7z.exe a %projectName%-%GOOS%%GOARCH%.zip %packFiles%
+del %projectName% /Q
 
 ::darwin32
 SET GOOS=darwin
 SET GOARCH=386
+SET binName=%projectName%-%GOOS%%GOARCH%
+go build -o %binName% %homePath%\main.go
+ren %binName% %projectName%
+7z.exe a %projectName%-%GOOS%%GOARCH%.zip %packFiles%
+del %projectName% /Q
+
+::darwin64
+SET GOOS=darwin
+SET GOARCH=amd64
 SET binName=%projectName%-%GOOS%%GOARCH%
 go build -o %binName% %homePath%\main.go
 ren %binName% %projectName%
