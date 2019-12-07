@@ -27,7 +27,7 @@ http-port   = 8080
 
 # CLI二进制文件
  [cli]
-     path = "D:/Workspace/Go/GOPATH/src/github.com/gogf/gf-cli/bin"
+     path = "gf-cli/bin"
 
 # CDN配置
 [cdn]

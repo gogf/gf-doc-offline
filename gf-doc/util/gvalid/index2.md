@@ -1,1 +1,0 @@
-数据/表单校验由`gvalid`模块实现，具体请参考【[数据校验](util/gvalid/index.md)】章节。
