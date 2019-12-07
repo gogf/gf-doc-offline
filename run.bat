@@ -2,4 +2,4 @@
 
 start http://localhost:8080
 
-gf-home.exe
+gf-doc-offline.exe
